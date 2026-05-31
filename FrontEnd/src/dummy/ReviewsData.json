@@ -1,0 +1,74 @@
+[
+  {
+    "name": "Shahid Gulzar",
+    "profile": "https://randomuser.me/api/portraits/men/32.jpg",
+    "reviewText": "I recently visited Urban Bites and had a generally positive experience overall. The prices were quite reasonable, making it an excellent option for people who are looking for good food without spending too much. The atmosphere was also a highlight, as the seating arrangement was comfortable and the environment felt welcoming for families and friends. The pizza itself was delicious, with a rich taste and a crust that was soft, fresh, and nicely cheesy just the way I prefer. Although there is still some room for improvement in service speed, I would still consider visiting again.",
+    "stars": 3
+  },
+  {
+    "name": "Aslam Javed Zebi",
+    "profile": "https://randomuser.me/api/portraits/men/45.jpg",
+    "reviewText": "The food here is really impressive, especially their Malai Pizza which is absolutely awesome and full of flavor. The service is quite good and the staff is cooperative. The building is medium in size but very neat and clean, which makes the overall dining experience pleasant. The rates are fair considering the quality and quantity of food they serve. Definitely a place worth visiting again with friends or family.",
+    "stars": 5
+  },
+  {
+    "name": "Farooq Laghari Ahmed Yar",
+    "profile": "https://randomuser.me/api/portraits/men/51.jpg",
+    "reviewText": "Zabardast service and great fast food experience. The staff behavior is very polite and respectful, which adds a lot to the overall impression of the place. Their service is noticeably faster compared to other nearby restaurants, which is a big plus when you're hungry and don't want to wait too long. Food quality is consistent and satisfying.",
+    "stars": 5
+  },
+  {
+    "name": "Mian Muhammad Bilal",
+    "profile": "https://randomuser.me/api/portraits/men/60.jpg",
+    "reviewText": "Excellent pizza and burgers with great taste and presentation. The sitting arrangement is very cozy and comfortable, making it a good place to relax and enjoy your meal. One thing I really appreciated is that they maintain high standards of hygiene in their kitchen, which builds trust. Overall, a reliable place for quality fast food.",
+    "stars": 5
+  },
+  {
+    "name": "Rana Kashif",
+    "profile": "https://randomuser.me/api/portraits/men/22.jpg",
+    "reviewText": "The atmosphere is great, especially for families who want a peaceful place to dine. We tried their special pizza and it was loaded with toppings and full of flavor. Portion size was generous and worth the price. It’s a good option for a weekend treat or casual outing with loved ones.",
+    "stars": 4
+  },
+  {
+    "name": "Sajid Mehmood",
+    "profile": "https://randomuser.me/api/portraits/men/36.jpg",
+    "reviewText": "It’s a good place overall but they need to improve their delivery time. The last time I ordered, the food arrived a bit cold which affected the experience. However, the taste was still quite good and the quality of ingredients was noticeable. With better delivery management, this place can become even better.",
+    "stars": 3
+  },
+  {
+    "name": "Imran Ali",
+    "profile": "https://randomuser.me/api/portraits/men/75.jpg",
+    "reviewText": "One of the few places in this area that offers a clean and well-maintained environment along with consistent taste. Their zinger burger is a must-try as it is crispy, juicy, and properly cooked. Overall, a dependable spot for fast food lovers who care about hygiene and quality.",
+    "stars": 5
+  },
+  {
+    "name": "Zubair Khan",
+    "profile": "https://randomuser.me/api/portraits/men/41.jpg",
+    "reviewText": "Great value for money. The deals they offer are very affordable, especially for students and groups. The portion sizes are quite generous, so you definitely get what you pay for. Taste is good and service is decent, making it a practical choice for regular visits.",
+    "stars": 4
+  },
+  {
+    "name": "Ali Hassan",
+    "profile": "https://randomuser.me/api/portraits/men/18.jpg",
+    "reviewText": "The pizza crust was perfectly baked with a nice balance of softness and crispiness. The cheese quality was top-notch and tasted fresh. Honestly, it feels better than many big brands in larger cities. A hidden gem in this area that deserves more recognition.",
+    "stars": 5
+  },
+  {
+    "name": "Usman Ghani",
+    "profile": "https://randomuser.me/api/portraits/men/27.jpg",
+    "reviewText": "Very nice place for hosting small gatherings or parties. They handled our group of 10 people very professionally without any issues. The food was served hot and on time, and everyone was satisfied with the taste and quality. Staff coordination was also impressive.",
+    "stars": 5
+  },
+  {
+    "name": "Bilal Ahmed",
+    "profile": "https://randomuser.me/api/portraits/men/53.jpg",
+    "reviewText": "The fries were a bit soggy which was slightly disappointing, but the pizza made up for it with its great taste and quality ingredients. Overall, it’s still a decent place for a quick bite if you are in Ahmed Yar and want something affordable.",
+    "stars": 3
+  },
+  {
+    "name": "Kamran Shahid",
+    "profile": "https://randomuser.me/api/portraits/men/64.jpg",
+    "reviewText": "Wonderful experience overall. The indoor lighting and decor create a premium and relaxing feel. It’s a perfect spot for dinner with family or even a casual meetup. Food quality, ambiance, and service all combine to make it a memorable place.",
+    "stars": 5
+  }
+]
