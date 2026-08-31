@@ -119,13 +119,13 @@ const NavBar = ({ isShow = true }) => {
         ) : (
           <div className="HereLoginAndSignup flex  gap-2 justify-center items-center">
             <button
-              onClick={() => navigate("auth")}
+              onClick={() => navigate("/auth", { state: { form: "signup" } })}
               className="px-6 py-2 border-2 border-[#FF4757]  rounded-full bg-[#FF4757] hover:text-[#FF4757] hover:bg-transparent  transition-all duration-300"
             >
               Sign Up
             </button>
             <button
-              onClick={() => navigate("auth")}
+              onClick={() => navigate("/auth", { state: { form: "login" } })}
               className="px-6 py-2 border-2 border-[#FF4757] text-[#FF4757] rounded-full hover:bg-[#FF4757] hover:text-white transition-colors duration-300"
             >
               Log In
@@ -187,13 +187,13 @@ const NavBar = ({ isShow = true }) => {
           ) : (
             <div className="HereLoginAndSignup flex  gap-2 justify-center items-center">
               <button
-                onClick={() => navigate("auth")}
+                onClick={() => navigate("/auth", { state: { form: "signup" } })}
                 className="px-6 py-2 border-2 border-[#FF4757]  rounded-full bg-[#FF4757] hover:text-[#FF4757] hover:bg-transparent  transition-all duration-300"
               >
                 Sign Up
               </button>
               <button
-                onClick={() => navigate("auth")}
+                onClick={() => navigate("/auth", { state: { form: "login" } })}
                 className="px-6 py-2 border-2 border-[#FF4757] text-[#FF4757] rounded-full hover:bg-[#FF4757] hover:text-white transition-colors duration-300"
               >
                 Log In

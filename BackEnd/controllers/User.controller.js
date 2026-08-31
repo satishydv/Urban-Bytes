@@ -240,6 +240,7 @@ const VerifyEmail = async (req, res) => {
     const checkForEmailAndOTP = await verifyEmailModel.findOne({
       email,
       otp: String(otp),
+      purpose: "verify",
     });
     if (!checkForEmailAndOTP) {
       return res.send({
@@ -283,4 +284,134 @@ const VerifyEmail = async (req, res) => {
   }
 };
 
-export { SignUpUser, LoginUser, UserByToken, LogOut, VerifyEmail };
+const RequestPasswordReset = async (req, res) => {
+  try {
+    const { email } = req.body;
+    if (!email) {
+      return res.send({
+        success: false,
+        message: "Email required",
+      });
+    }
+
+    const user = await userModel.findOne({ email });
+    if (!user) {
+      return res.send({
+        success: false,
+        message: "User not found",
+      });
+    }
+
+    const otpNum = Math.floor(1000 + Math.random() * 90000000);
+    const expiresAt = new Date(Date.now() + 10 * 60 * 1000);
+
+    await verifyEmailModel.deleteMany({ email, purpose: "reset" });
+    await verifyEmailModel.create({
+      email,
+      otp: String(otpNum),
+      purpose: "reset",
+      expiresAt,
+    });
+
+    sendEmail(
+      email,
+      "Password Reset Code",
+      null,
+      `
+  <div style="font-family: Arial, sans-serif; background:#0f172a; padding:30px; color:#fff;">
+    <div style="max-width:500px; margin:auto; background:#1e293b; padding:30px; border-radius:12px; text-align:center;">
+      <h2 style="color:#FF4757;">Reset Your Password</h2>
+      <p style="color:#cbd5e1; margin-bottom:12px;">Use this code to reset your password.</p>
+      <div style="font-size:28px; letter-spacing:4px; font-weight:bold; color:#fff;">${otpNum}</div>
+      <p style="margin-top:16px; font-size:12px; color:#94a3b8;">This code expires in 10 minutes.</p>
+    </div>
+  </div>
+  `,
+    ).catch(console.error);
+
+    return res.send({
+      success: true,
+      message: "Reset code sent to email",
+    });
+  } catch (error) {
+    return res.send({
+      success: false,
+      message: error.message,
+    });
+  }
+};
+
+const ResetPasswordWithOtp = async (req, res) => {
+  try {
+    const { email, otp, password } = req.body;
+    if (!email || !otp || !password) {
+      return res.send({
+        success: false,
+        message: "Email, otp, and password required",
+      });
+    }
+
+    if (password.length < 8) {
+      return res.send({
+        success: false,
+        message: "Password must be at least 8 characters",
+      });
+    }
+
+    const record = await verifyEmailModel.findOne({
+      email,
+      otp: String(otp),
+      purpose: "reset",
+    });
+
+    if (!record) {
+      return res.send({
+        success: false,
+        message: "Invalid otp or email",
+      });
+    }
+
+    if (record.expiresAt && record.expiresAt.getTime() < Date.now()) {
+      await verifyEmailModel.deleteOne({ _id: record._id });
+      return res.send({
+        success: false,
+        message: "OTP expired",
+      });
+    }
+
+    const hashpass = await bcrypt.hash(password, 10);
+    const updatedUser = await userModel.findOneAndUpdate(
+      { email },
+      { password: hashpass },
+      { new: true },
+    );
+
+    if (!updatedUser) {
+      return res.send({
+        success: false,
+        message: "User not found",
+      });
+    }
+
+    await verifyEmailModel.deleteMany({ email, purpose: "reset" });
+    return res.send({
+      success: true,
+      message: "Password updated successfully",
+    });
+  } catch (error) {
+    return res.send({
+      success: false,
+      message: error.message,
+    });
+  }
+};
+
+export {
+  SignUpUser,
+  LoginUser,
+  UserByToken,
+  LogOut,
+  VerifyEmail,
+  RequestPasswordReset,
+  ResetPasswordWithOtp,
+};

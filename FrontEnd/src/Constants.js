@@ -6,8 +6,8 @@ import { FaSitemap } from "react-icons/fa";
 import { MdOutlineProductionQuantityLimits } from "react-icons/md";
 
 
-const BACK_END_API = "http://localhost:5000"
-// const BACK_END_API = "https://punjabpizzaclub.onrender.com"
+// const BACK_END_API = "http://localhost:5000"
+const BACK_END_API = "https://api.satishyadav.codes";
 
 const AllCategory = [
     "Pizza",
@@ -26,6 +26,7 @@ const RestrictPages = [
     "/auth",
     "/checkout",
     "/user-profile",
+    "/change-password",
     "/privacy",
     "/tofs"
 ];

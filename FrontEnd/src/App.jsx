@@ -19,6 +19,7 @@ import UserProfile from "./pages/UserProfile";
 import AllProductsAdminPage from "./pages/AllProducts";
 import AllCustomers from "./pages/AllCustomers";
 import AddNewProduct from "./pages/AddNewProduct";
+import ChangePassword from "./pages/ChangePassword";
 
 import NavBar from "./components/NavBar";
 import Footer from "./components/Footer";
@@ -206,6 +207,10 @@ const App = () => {
         <Route
           path="/user-profile"
           element={user.isLogged ? <UserProfile /> : <LoginAndSignUp />}
+        />
+        <Route
+          path="/change-password"
+          element={user.isLogged ? <ChangePassword /> : <LoginAndSignUp />}
         />
 
         {/* Only admin can access */}

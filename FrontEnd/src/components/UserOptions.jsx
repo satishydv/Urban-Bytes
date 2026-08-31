@@ -74,6 +74,15 @@ const UserOptions = ({
           My Orders
         </div>
       )}
+      <div
+        onClick={() => {
+          navigate("/change-password");
+          setIsOpenUserOption(!isOpenUserOption);
+        }}
+        className={CommonClass}
+      >
+        Change Password
+      </div>
       {Loading ? (
         "Signing Out..."
       ) : (

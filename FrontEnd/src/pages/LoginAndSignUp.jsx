@@ -10,18 +10,28 @@ import { toast } from "react-toastify";
 import { BACK_END_API } from "../Constants";
 import { useDispatch, useSelector } from "react-redux";
 import { login } from "../store/slices/userSlice";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 
 const LoginAndSignUp = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const user = useSelector((state) => state.user);
+  const location = useLocation();
+  
   useEffect(() => {
     if (user.name) {
       navigate("/");
     }
   }, []);
-  const [CurrentForm, setCurrentForm] = useState("signup");
+
+  const [CurrentForm, setCurrentForm] = useState(location.state?.form || "signup");
+  
+  useEffect(() => {
+    if (location.state?.form) {
+      setCurrentForm(location.state.form);
+    }
+  }, [location.state]);
+
   const [isShowPass, setIsShowPass] = useState(false);
   const [Loading, setLoading] = useState(false);
   const [profileImg, setprofileImg] = useState("");

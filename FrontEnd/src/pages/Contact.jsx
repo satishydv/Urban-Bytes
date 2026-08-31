@@ -87,21 +87,21 @@ export default function ContactPage() {
               <div className="bg-[#ff6467] p-3 rounded-full">
                 <MdLocationOn className="text-white text-xl" />
               </div>
-              <span> Punjab, Pakistan 🇵🇰</span>
+              <span>Ranchi, JH, India</span>
             </div>
 
             <div className="flex items-center gap-4">
               <div className="bg-[#ff6467] p-3 rounded-full">
                 <MdPhone className="text-white text-xl" />
               </div>
-              <span>+92343 456 7890</span>
+              <span>+91 6204812279</span>
             </div>
 
             <div className="flex items-center gap-4">
               <div className="bg-[#ff6467] p-3 rounded-full">
                 <MdEmail className="text-white text-xl" />
               </div>
-              <span>contact@urbanbites.com</span>
+              <span>thesatishydv@gmail.com</span>
             </div>
           </div>
         </div>
@@ -152,7 +152,7 @@ export default function ContactPage() {
       <section className="px-6 pb-16 max-w-6xl mx-auto">
         <div className="rounded-lg overflow-hidden">
           <iframe
-            src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d32250.473131757262!2d72.76477032656831!3d31.827351131468014!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e6!4m5!1s0x39222b6aa65966cf%3A0x608a786760cb55ff!2sPunjab%20Pizza%20Club%2C%20RRF2%2BGHF%2C%20Lalian%2C%20Pakistan!3m2!1d31.823806899999997!2d72.8014869!4m5!1s0x39222b6aa65966cf%3A0x608a786760cb55ff!2sPunjab%20Pizza%20Club%2C%20RRF2%2BGHF%2C%20Lalian%2C%20Pakistan!3m2!1d31.823806899999997!2d72.8014869!5e0!3m2!1sen!2s!4v1776926369317!5m2!1sen!2s"
+            src="https://maps.google.com/maps?q=Ranchi,+Jharkhand,+India&t=&z=13&ie=UTF8&iwloc=&output=embed"
             className="w-full h-75 border-0"
             loading="lazy"
           ></iframe>
